@@ -1,0 +1,118 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+
+<style>
+html {
+	box-sizing: border-box;
+	font-family: "Nothing You Could Do";
+}
+html,
+body {
+	height: 100%;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+body {
+	background-color: #bd4aff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.heading {
+    position: fixed;
+    margin: 6vmin 3vmin;
+    top: 0;
+}
+.card-container {
+	position: relative;
+	width: 80vmin;
+	height: 90vmin;
+}
+.card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px rgb(17 17 17 / 35%);
+    transition: transform 0.35s ease-out;
+    transform: translate(var(--x), var(--y)) scale(0.35) rotate(var(--angle));
+    will-change: transform;
+	cursor: pointer;
+}
+.card:before {
+	content: "";
+	display: block;
+	width: 90%;
+	height: 80%;
+	margin: 5%;
+	background: var(--image) center center no-repeat;
+	background-size: cover;
+	box-shadow: inset 0 0 5px rgba(#222, .35);
+	border-radius: 2px;
+	filter: sepia(.2) brightness(.9) contrast(1.2);
+	transition: opacity .35s ease-out;
+	will-change: opacity;
+}
+.card:after {
+	display: block;
+	content: var(--caption);
+	font-weight: 500;
+	color: #555;
+	font-size: 3vmin;
+	text-align: center;
+}
+.card:hover {
+    transform: scale(1) rotate(0deg);
+    z-index: 1;
+}
+.card:hover:before {
+    opacity: 1;
+}
+</style>
+
+</head>
+	
+<body>
+
+<h1 class="heading">Bebeloves Memories❤️</h1>
+
+<div class="card-container">
+
+ <div class="card" style="--image: url('img/bebe1.jpg'); --angle: -5deg; --x: 5%; --y: 15%; --caption: 'Valentines Date'"></div>
+
+ <div class="card" style="--image: url('img/bebe2.jpg'); --angle: -1deg; --x: -10%; --y: -20%; --caption: 'E-Lib Study'"></div>
+
+ <div class="card" style="--image: url('img/bebe3.jpg'); --angle: -4deg; --x: -20%; --y: 5%; --caption: 'Pampanga Date'"></div>
+
+ <div class="card" style="--image: url('img/bebe4.jpg'); --angle: 7deg; --x: 10%; --y: -7%; --caption: 'Cutiee'"></div>
+
+ <div class="card" style="--image: url('img/bebe5.jpg'); --angle: 7deg; --x: 30%; --y: 15%; --caption: 'UnliWings Wahh'"></div>
+
+ <div class="card" style="--image: url('img/bebe6.jpg'); --angle: 5deg; --x: -35%; --y: -20%; --caption: 'Birthday Bebe'"></div>
+
+ <div class="card" style="--image: url('img/bebe7.jpg'); --angle: -1deg; --x: -65%; --y: 5%; --caption: 'Birthday Bebe'"></div>
+
+ <div class="card" style="--image: url('img/bebe8.jpg'); --angle: 7deg; --x: 30%; --y: -7%; --caption: 'Cuddles & kisses'"></div>
+
+ <div class="card" style="--image: url('img/bebe9.jpg'); --angle: -4deg; --x: 50%; --y: 15%; --caption: 'Dorm <3'"></div>
+
+ <div class="card" style="--image: url('img/bebe10.jpg'); --angle: -1deg; --x: 80%; --y: 7%; --caption: 'Mattcha together'"></div>
+
+ <div class="card" style="--image: url('img/bebe11.jpg'); --angle: -3deg; --x: -45%; --y: 15%; --caption: 'Jabee hehe'"></div>
+
+ <div class="card" style="--image: url('img/bebe12.jpg'); --angle: 7deg; --x: 70%; --y: -7%; --caption: 'Best Concert'"></div>
+
+</div>
+
+</body>
+</html>
